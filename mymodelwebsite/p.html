@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+/* Custom CSS */
+#photo-shuffle-container .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    opacity: 0; /* Initially hide images */
+    transition: opacity 1s ease-in-out; /* Add fade transition */
+}
+
+@media (max-width: 992px) {
+    #photo-shuffle-container .col-lg-3 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (max-width: 768px) {
+    #photo-shuffle-container .col-lg-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    #photo-shuffle-container .col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.caption {
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    
+
+
+<section id="portfolio" class="py-5 bg-light"> <!-- Added background color -->
+  <div class="container">
+    <h2 class="text-center mb-4">My Portfolio</h2>
+    <div class="row" id="photo-shuffle-container">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <img src="photos/WhatsApp Image 2024-05-26 at 20.35.12.jpeg" class="img-fluid rounded photo" alt="Model Photo 1">
+          <div class="caption mt-2">Model Photo 1</div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <img src="photos/WhatsApp Image 2024-05-26 at 20.35.28.jpeg" class="img-fluid rounded photo" alt="Model Photo 2">
+          <div class="caption mt-2">Model Photo 2</div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <img src="photos/WhatsApp Image 2024-05-26 at 21.22.14.jpeg" class="img-fluid rounded photo" alt="Model Photo 3">
+          <div class="caption mt-2">Model Photo 3</div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <img src="photos/WhatsApp Image 2024-05-26 at 21.28.51.jpeg" class="img-fluid rounded photo" alt="Model Photo 4">
+          <div class="caption mt-2">Model Photo 4</div>
+        </div>
+        <!-- Add more images here -->
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    // Function to shuffle images
+    function shuffleImages() {
+        var $images = $("#photo-shuffle-container").find(".col-lg-3");
+        $images.sort(function() {
+            return Math.random() - 0.5;
+        });
+        $images.each(function(index) {
+            // Fade out image
+            $(this).css('opacity', '1');
+        });
+        $("#photo-shuffle-container").empty().append($images);
+        // Fade in shuffled images immediately
+        $images.css('opacity', '2');
+    }
+
+    // Shuffle images when the page loads
+    shuffleImages();
+
+    // Shuffle images every 3 seconds
+    setInterval(function(){
+        shuffleImages();
+    }, 3000);
+});
+</script>
+</body>
+</html>

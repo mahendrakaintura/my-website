@@ -1,0 +1,178 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: #333;
+}
+/* styles.css */
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* styles.css */
+
+.container {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.text {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+/* styles.css */
+
+.headline-container {
+  width: 100%;
+  text-align: center;
+}
+/* styles.css */
+
+.container {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* styles.css */
+
+.container {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* styles.css */
+
+.container {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+
+/* styles.css */
+
+/* Style for the h2 element */
+.main-container {
+    width: 600px;
+    height: 80px;
+    margin: 0px auto;
+    box-shadow: 0px 0px 5px #d00;
+}
+/* CSS styles for the headline */
+ h2 {
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    color: transparent;
+    background-image: url('https://i.imgur.com/xWd5wMs.png'); /* Replace this with your own painted texture */
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+  }
+/* Example of changing font style */
+.italic {
+    font-style: italic;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fallback color */
+    /* Japanese pattern using CSS gradients */
+    background-image:
+        radial-gradient(circle, #fefefe 1%, #f0f0f0 1%, #f0f0f0 90%, transparent 90%),
+        linear-gradient(to right, #e6e6e6, #e6e6e6),
+        linear-gradient(to bottom, #e6e6e6, #e6e6e6);
+    background-size: 20px 20px, 100% 20px, 20px 100%;
+    background-position: 0 0, 0 0, 0 0;
+}
+hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") top center;
+  background-size: cover;
+}
+
+hero:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+hero .hero-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+}
+
+hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+hero p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+hero p span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
+
+@media (min-width: 1024px) {
+  hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+
